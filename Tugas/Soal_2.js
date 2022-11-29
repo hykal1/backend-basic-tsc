@@ -6,5 +6,8 @@
 
 module.exports = function perkalianDuaBilangan(a, b) {
     // Write your code here
-    
+    return a * b;
 }
+
+const perkalianDuaBilangan = require('./Soal_2.js');
+console.log(perkalianDuaBilangan(5, 20));

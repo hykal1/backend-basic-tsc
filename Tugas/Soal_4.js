@@ -16,7 +16,17 @@
 
  module.exports = function submission(n) {
     // Write your code here
-    
+    let prima = [], result = [];
+    for (let i=2; i<=n; i++) {
+        if (!prima[i]) {
+            result.push(i);
+            for (let j=i; j<=n; j+=i) {
+                prima[j] = true;
+            }
+        }
+    }
+    return result;
 }
 
-module.exports = submission;
+const submission = require('./Soal_4.js');
+console.log(submission(10));

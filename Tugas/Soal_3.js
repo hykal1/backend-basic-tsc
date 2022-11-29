@@ -12,5 +12,15 @@
 
 module.exports = function authorize(role) {
     // Write your code here
-    
+    if (role == "admin"){
+        console.log("Halo Admin")
+    } else if (role == "user"){
+        console.log("Halo User")
+    } else {
+        console.log("Halo!")
+    }
+    return role;
 }
+
+const authorize = require('./Soal_3.js');
+authorize("Admin".toLowerCase())
